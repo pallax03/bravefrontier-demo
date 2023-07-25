@@ -1,0 +1,437 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://assets/sound/home/bf002_mypage.mp3" type="AudioStream" id=1]
+[ext_resource path="res://assets/UI/home/base.jpg" type="Texture" id=2]
+[ext_resource path="res://assets/UI/home/character_frame.png" type="Texture" id=3]
+[ext_resource path="res://assets/UI/header/header_ui.png" type="Texture" id=4]
+[ext_resource path="res://scripts/Header.gd" type="Script" id=5]
+[ext_resource path="res://assets/font-arial-bold.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://assets/UI/header/header_arena_light_01.png" type="Texture" id=7]
+[ext_resource path="res://assets/UI/footer/footer_btn.png" type="Texture" id=8]
+[ext_resource path="res://scripts/Unit.gd" type="Script" id=9]
+[ext_resource path="res://assets/UI/home/home_btn_box1.png" type="Texture" id=10]
+[ext_resource path="res://scripts/Footer.gd" type="Script" id=12]
+[ext_resource path="res://assets/UI/home/home_win_quest.png" type="Texture" id=13]
+[ext_resource path="res://assets/UI/home/home_btn_menu1.png" type="Texture" id=14]
+[ext_resource path="res://scripts/Home.gd" type="Script" id=15]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 6 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 50, 50 )
+
+[node name="UI" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="base" type="TextureRect" parent="."]
+margin_top = -90.0
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 1 )
+autoplay = true
+
+[node name="body" type="Control" parent="."]
+anchor_top = 0.341
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -170.0
+margin_bottom = -100.0
+
+[node name="Home" type="Container" parent="body"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 15 )
+
+[node name="CharacterFrame" type="Sprite" parent="body/Home"]
+position = Vector2( 321, 171.64 )
+texture = ExtResource( 3 )
+
+[node name="HomeBtnBox" type="Sprite" parent="body/Home"]
+position = Vector2( 547, 384.64 )
+texture = ExtResource( 10 )
+
+[node name="HomeBtnMenu" type="Sprite" parent="body/Home"]
+position = Vector2( 92, 388.64 )
+texture = ExtResource( 14 )
+
+[node name="HomeWinQuest" type="Sprite" parent="body/Home"]
+position = Vector2( 322, 525.64 )
+texture = ExtResource( 13 )
+
+[node name="Unit" type="Container" parent="body"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -600.0
+margin_bottom = -662.64
+script = ExtResource( 9 )
+
+[node name="header" type="Control" parent="."]
+margin_right = 644.0
+margin_bottom = 206.0
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="expbalckbar" type="Sprite" parent="header"]
+position = Vector2( 117, 83 )
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 290, 180, 140, 25 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="expbar" type="Sprite" parent="header"]
+position = Vector2( 118, 83 )
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 0, 180, 140, 25 )
+
+[node name="energyblackbar" type="Sprite" parent="header"]
+position = Vector2( 116, 113 )
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 290, 180, 140, 25 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="energybar" type="Sprite" parent="header"]
+position = Vector2( 115, 113 )
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 146, 180, 140, 25 )
+
+[node name="mainheader" type="Sprite" parent="header"]
+position = Vector2( 321, 78 )
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( -6, -18, 657, 195 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="arenaorb1" type="Sprite" parent="header"]
+position = Vector2( 554, 142 )
+texture = ExtResource( 7 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="arenaorb2" type="Sprite" parent="header"]
+position = Vector2( 581, 142 )
+texture = ExtResource( 7 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="arenaorb3" type="Sprite" parent="header"]
+position = Vector2( 607, 142 )
+texture = ExtResource( 7 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Username" type="Label" parent="header"]
+margin_left = 7.0
+margin_top = 5.0
+margin_right = 185.0
+margin_bottom = 29.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_outline_modulate = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "fontdadadadadadadadadad"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="ArenaRank" type="Label" parent="header"]
+margin_left = 453.0
+margin_top = 6.0
+margin_right = 631.0
+margin_bottom = 30.0
+custom_fonts/font = SubResource( 1 )
+align = 1
+valign = 1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Lv" type="Label" parent="header"]
+margin_left = 56.0
+margin_top = 43.0
+margin_right = 98.0
+margin_bottom = 61.0
+custom_fonts/font = SubResource( 1 )
+align = 1
+valign = 1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="RC" type="Label" parent="header"]
+margin_left = 154.0
+margin_top = 43.0
+margin_right = 177.0
+margin_bottom = 60.0
+custom_fonts/font = SubResource( 1 )
+align = 1
+valign = 1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Gems" type="Label" parent="header"]
+margin_left = 501.0
+margin_top = 42.0
+margin_right = 619.0
+margin_bottom = 61.0
+custom_fonts/font = SubResource( 1 )
+align = 2
+valign = 2
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Zel" type="Label" parent="header"]
+margin_left = 500.0
+margin_top = 73.0
+margin_right = 620.0
+margin_bottom = 92.0
+custom_fonts/font = SubResource( 1 )
+align = 2
+valign = 2
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Karma" type="Label" parent="header"]
+margin_left = 500.0
+margin_top = 103.0
+margin_right = 620.0
+margin_bottom = 123.0
+custom_fonts/font = SubResource( 1 )
+align = 2
+valign = 2
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Energy" type="Label" parent="header"]
+margin_left = 60.0
+margin_top = 107.0
+margin_right = 171.0
+margin_bottom = 121.0
+custom_fonts/font = SubResource( 1 )
+align = 1
+valign = 1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="EnergyLabel" type="Label" parent="header"]
+margin_left = 19.0
+margin_top = 131.0
+margin_right = 175.0
+margin_bottom = 151.0
+custom_fonts/font = SubResource( 1 )
+align = 1
+valign = 1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="footer" type="Control" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -320.0
+margin_top = -108.0
+margin_right = 320.0
+script = ExtResource( 12 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Home" type="Sprite" parent="footer"]
+position = Vector2( 1008, -214 )
+texture = ExtResource( 8 )
+centered = false
+offset = Vector2( -1007, 220 )
+region_enabled = true
+region_rect = Rect2( 111, 2, 107, 104 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="HomePressed" type="Sprite" parent="footer/Home"]
+visible = false
+texture = ExtResource( 8 )
+centered = false
+offset = Vector2( -1007, 220 )
+region_enabled = true
+region_rect = Rect2( 2, 2, 107, 104 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="footer/Home"]
+position = Vector2( -1003, 222 )
+shape = SubResource( 2 )
+
+[node name="Unit" type="Sprite" parent="footer"]
+position = Vector2( 1, 1 )
+texture = ExtResource( 8 )
+centered = false
+offset = Vector2( 107, 5 )
+region_enabled = true
+region_rect = Rect2( 108, 108, 106, 104 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="UnitPressed" type="Sprite" parent="footer/Unit"]
+visible = false
+position = Vector2( 102, 216 )
+rotation = -1.5708
+texture = ExtResource( 8 )
+centered = false
+offset = Vector2( 107, 5 )
+region_enabled = true
+region_rect = Rect2( 2, 324, 104, 106 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="footer/Unit"]
+position = Vector2( 110, 107 )
+rotation = -1.5708
+shape = SubResource( 2 )
+
+[node name="Town" type="Sprite" parent="footer"]
+position = Vector2( -1, 0 )
+rotation = -1.5708
+texture = ExtResource( 8 )
+centered = false
+offset = Vector2( -110, 215 )
+region_enabled = true
+region_rect = Rect2( 2, 216, 104, 106 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="TownPressed" type="Sprite" parent="footer/Town"]
+visible = false
+rotation = -6.28319
+texture = ExtResource( 8 )
+centered = false
+offset = Vector2( -110, 215 )
+region_enabled = true
+region_rect = Rect2( 2, 108, 104, 106 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="footer/Town"]
+position = Vector2( -108, 318 )
+rotation = -1.5708
+shape = SubResource( 2 )
+
+[node name="Shop" type="Sprite" parent="footer"]
+position = Vector2( 1, 1 )
+texture = ExtResource( 8 )
+centered = false
+offset = Vector2( 319, 5 )
+region_enabled = true
+region_rect = Rect2( 324, 108, 106, 104 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="ShopPressed" type="Sprite" parent="footer/Shop"]
+visible = false
+texture = ExtResource( 8 )
+centered = false
+offset = Vector2( 319, 5 )
+region_enabled = true
+region_rect = Rect2( 216, 108, 106, 104 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="footer/Shop"]
+position = Vector2( 322, 7 )
+shape = SubResource( 2 )
+
+[node name="Summon" type="Sprite" parent="footer"]
+position = Vector2( 426, 110 )
+rotation = -1.5708
+texture = ExtResource( 8 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 108, 322, 104, 106 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="SummonPressed" type="Sprite" parent="footer/Summon"]
+visible = false
+position = Vector2( -3.05176e-05, -3.05176e-05 )
+rotation = -6.28319
+texture = ExtResource( 8 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 108, 214, 104, 106 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="footer/Summon"]
+position = Vector2( 2, 3 )
+shape = SubResource( 2 )
+
+[node name="Social" type="Sprite" parent="footer"]
+position = Vector2( 532, 6 )
+texture = ExtResource( 8 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 329, 2, 107, 104 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="SocialPressed" type="Sprite" parent="footer/Social"]
+visible = false
+texture = ExtResource( 8 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 220, 2, 107, 104 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="footer/Social"]
+position = Vector2( 3, 2 )
+shape = SubResource( 2 )
+
+[connection signal="pressed" from="footer/Home/TouchScreenButton" to="footer" method="hometriggered"]
+[connection signal="pressed" from="footer/Unit/TouchScreenButton" to="footer" method="unittriggered"]
+[connection signal="pressed" from="footer/Town/TouchScreenButton" to="footer" method="towntriggered"]
+[connection signal="pressed" from="footer/Shop/TouchScreenButton" to="footer" method="shoptriggered"]
+[connection signal="pressed" from="footer/Summon/TouchScreenButton" to="footer" method="summontriggered"]
+[connection signal="pressed" from="footer/Social/TouchScreenButton" to="footer" method="socialtriggered"]

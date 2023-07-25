@@ -1,0 +1,16 @@
+uri: http://localhost:8080/
+
+JSON USER:
+{
+   "mail":"admin",
+   "password":"admin",
+   "display_name":"gamemaster"
+}
+
+/accounts:
+GET: uri+/accounts?mail=admin
+POST: uri+/accounts --> + payload: {JSON USER} 
+
+-----------------------------------------------
+
+

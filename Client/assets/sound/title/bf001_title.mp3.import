@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/bf001_title.mp3-d80d4130f3e21718c913cba9a876f047.mp3str"
+
+[deps]
+
+source_file="res://assets/sound/title/bf001_title.mp3"
+dest_files=[ "res://.import/bf001_title.mp3-d80d4130f3e21718c913cba9a876f047.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
