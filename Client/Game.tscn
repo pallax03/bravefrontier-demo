@@ -1,0 +1,97 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://scripts/Start.gd" type="Script" id=1]
+[ext_resource path="res://assets/sound/title/bf001_title.mp3" type="AudioStream" id=2]
+[ext_resource path="res://assets/UI/title/title_msg.png" type="Texture" id=3]
+[ext_resource path="res://assets/UI/title/logo.jpg" type="Texture" id=4]
+[ext_resource path="res://assets/UI/title/title_logo.jpg" type="Texture" id=5]
+[ext_resource path="res://assets/font-arial-bold.ttf" type="DynamicFontData" id=7]
+[ext_resource path="res://assets/UI/title/btn.png" type="Texture" id=8]
+
+[sub_resource type="Gradient" id=4]
+offsets = PoolRealArray( 0, 0.988827, 1 )
+colors = PoolColorArray( 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 1, 1 )
+
+[sub_resource type="GradientTexture" id=5]
+gradient = SubResource( 4 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 320, 425 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 300, 80 )
+
+[sub_resource type="DynamicFont" id=1]
+size = 68
+font_data = ExtResource( 7 )
+
+[node name="UI" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+
+[node name="black" type="TextureRect" parent="."]
+margin_left = -60.0
+margin_right = 740.0
+margin_bottom = 1292.0
+texture = SubResource( 5 )
+expand = true
+
+[node name="mylogo" type="TextureRect" parent="."]
+margin_left = -34.0
+margin_top = 24.0
+margin_right = 602.0
+margin_bottom = 988.0
+texture = ExtResource( 4 )
+expand = true
+
+[node name="title" type="TextureRect" parent="."]
+visible = false
+margin_right = 644.0
+margin_bottom = 94.0
+texture = ExtResource( 5 )
+stretch_mode = 3
+
+[node name="label" type="TextureRect" parent="title"]
+anchor_right = 1.0
+margin_left = 643.0
+margin_top = 848.0
+margin_right = 639.0
+margin_bottom = 1791.0
+rect_rotation = -180.0
+texture = ExtResource( 3 )
+expand = true
+stretch_mode = 5
+flip_h = true
+flip_v = true
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="title/label"]
+shape = SubResource( 2 )
+
+[node name="sound" type="AudioStreamPlayer" parent="title"]
+stream = ExtResource( 2 )
+
+[node name="Account" type="Sprite" parent="title"]
+position = Vector2( 509, 905 )
+scale = Vector2( 0.388682, 0.482692 )
+texture = ExtResource( 8 )
+
+[node name="AccountPressed" type="Sprite" parent="title/Account"]
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="title/Account"]
+shape = SubResource( 3 )
+shape_centered = false
+
+[node name="Label" type="Label" parent="title/Account"]
+margin_left = -198.105
+margin_top = -29.0038
+margin_right = 207.895
+margin_bottom = 54.9962
+custom_fonts/font = SubResource( 1 )
+text = "Accounts"
+align = 1
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
+
+[connection signal="pressed" from="title/label/TouchScreenButton" to="." method="_on_TouchScreenButton_pressed"]
+[connection signal="pressed" from="title/Account/TouchScreenButton" to="." method="_on_Account_pressed"]

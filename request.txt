@@ -2,15 +2,25 @@ uri: http://localhost:8080/
 
 JSON USER:
 {
-   "mail":"admin",
+   "_id":"admin",                               (MAIL is primary key)
    "password":"admin",
-   "display_name":"gamemaster"
+   "display_name":"gamemaster",
+   "zel":"0",
+   "gems":"0",
+   "karma":"0",
+   "energy":"5",
+   "level":"0",
+   "arena_orbs":"0"
 }
 
 /accounts:
-GET: uri+/accounts?mail=admin
-POST: uri+/accounts --> + payload: {JSON USER} 
+GET: uri+/accounts?{mail}                       -->   retrieve user info
+POST: uri+/accounts --> + payload: {JSON USER}  -->   register an user
 
 -----------------------------------------------
 
-
+JSON UNIT:
+{
+   "_id":"10011",
+   "name":"admin",
+}

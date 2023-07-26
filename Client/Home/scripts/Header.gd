@@ -2,19 +2,7 @@ extends Control
 
 
 # Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-var username = "Pallax"
 
-var level = 1
-var levelbar = 500
-var rc = "--"
-var energy = 400
- 
-var arena_rank = "Newbie"
-var gems = 5
-var zel = 10000
-var karma = 9999999
 
 
 # Called when the node enters the scene tree for the first time.

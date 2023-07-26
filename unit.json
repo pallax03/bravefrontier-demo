@@ -1,0 +1,319 @@
+{
+    "ai": [
+        {
+            "action": "skill",
+            "chance%": 60,
+            "target conditions": "hp_50pr_under",
+            "target type": "enemy"
+        },
+        {
+            "action": "skill",
+            "chance%": 30,
+            "target conditions": "random",
+            "target type": "enemy"
+        },
+        {
+            "action": "attack",
+            "chance%": 70,
+            "target conditions": "hp_max",
+            "target type": "enemy"
+        },
+        {
+            "action": "attack",
+            "chance%": 50,
+            "target conditions": "hp_min",
+            "target type": "enemy"
+        },
+        {
+            "action": "attack",
+            "chance%": 100,
+            "target conditions": "random",
+            "target type": "enemy"
+        }
+    ],
+    "ai_id": "110",
+    "animations": {
+        "attack": {
+            "total number of frames": 131
+        },
+        "idle": {
+            "total number of frames": 51
+        },
+        "move": {
+            "total number of frames": 1
+        }
+    },
+    "associated_elgifs": [
+        "2"
+    ],
+    "bb": {
+        "associated_units": [
+            "10011:bb"
+        ],
+        "damage frames": [
+            {
+                "effect delay time(ms)/frame": "0.0/0",
+                "frame times": [
+                    26,
+                    47,
+                    68,
+                    89,
+                    110
+                ],
+                "hit dmg% distribution": [
+                    20,
+                    20,
+                    20,
+                    20,
+                    20
+                ],
+                "hit dmg% distribution (total)": 100,
+                "hits": 5,
+                "proc id": "1"
+            }
+        ],
+        "desc": "5 combo Fire elemental attack on all enemies",
+        "drop check count": 1,
+        "id": "10011",
+        "levels": [
+            {
+                "bc cost": 15,
+                "effects": [
+                    {
+                        "bb atk%": 30,
+                        "effect delay time(ms)/frame": "0.0/0",
+                        "params": "30,0,0,0,0,0",
+                        "proc id": "1",
+                        "target area": "aoe",
+                        "target type": "enemy"
+                    }
+                ]
+            },
+            {
+                "bc cost": 15,
+                "effects": [
+                    {
+                        "bb atk%": 35,
+                        "effect delay time(ms)/frame": "0.0/0",
+                        "params": "35,0,0,0,0,0",
+                        "proc id": "1",
+                        "target area": "aoe",
+                        "target type": "enemy"
+                    }
+                ]
+            },
+            {
+                "bc cost": 15,
+                "effects": [
+                    {
+                        "bb atk%": 40,
+                        "effect delay time(ms)/frame": "0.0/0",
+                        "params": "40,0,0,0,0,0",
+                        "proc id": "1",
+                        "target area": "aoe",
+                        "target type": "enemy"
+                    }
+                ]
+            },
+            {
+                "bc cost": 15,
+                "effects": [
+                    {
+                        "bb atk%": 45,
+                        "effect delay time(ms)/frame": "0.0/0",
+                        "params": "45,0,0,0,0,0",
+                        "proc id": "1",
+                        "target area": "aoe",
+                        "target type": "enemy"
+                    }
+                ]
+            },
+            {
+                "bc cost": 15,
+                "effects": [
+                    {
+                        "bb atk%": 50,
+                        "effect delay time(ms)/frame": "0.0/0",
+                        "params": "50,0,0,0,0,0",
+                        "proc id": "1",
+                        "target area": "aoe",
+                        "target type": "enemy"
+                    }
+                ]
+            },
+            {
+                "bc cost": 15,
+                "effects": [
+                    {
+                        "bb atk%": 55,
+                        "effect delay time(ms)/frame": "0.0/0",
+                        "params": "55,0,0,0,0,0",
+                        "proc id": "1",
+                        "target area": "aoe",
+                        "target type": "enemy"
+                    }
+                ]
+            },
+            {
+                "bc cost": 15,
+                "effects": [
+                    {
+                        "bb atk%": 60,
+                        "effect delay time(ms)/frame": "0.0/0",
+                        "params": "60,0,0,0,0,0",
+                        "proc id": "1",
+                        "target area": "aoe",
+                        "target type": "enemy"
+                    }
+                ]
+            },
+            {
+                "bc cost": 15,
+                "effects": [
+                    {
+                        "bb atk%": 65,
+                        "effect delay time(ms)/frame": "0.0/0",
+                        "params": "65,0,0,0,0,0",
+                        "proc id": "1",
+                        "target area": "aoe",
+                        "target type": "enemy"
+                    }
+                ]
+            },
+            {
+                "bc cost": 15,
+                "effects": [
+                    {
+                        "bb atk%": 70,
+                        "effect delay time(ms)/frame": "0.0/0",
+                        "params": "70,0,0,0,0,0",
+                        "proc id": "1",
+                        "target area": "aoe",
+                        "target type": "enemy"
+                    }
+                ]
+            },
+            {
+                "bc cost": 15,
+                "effects": [
+                    {
+                        "bb atk%": 75,
+                        "effect delay time(ms)/frame": "0.0/0",
+                        "params": "75,0,0,0,0,0",
+                        "proc id": "1",
+                        "target area": "aoe",
+                        "target type": "enemy"
+                    }
+                ]
+            }
+        ],
+        "name": "Flare Ride"
+    },
+    "bfmtMetadata": {
+        "createdAt": "2015-08-13T15:42:33.000Z",
+        "updatedAt": "2016-04-08T16:05:21.000Z"
+    },
+    "category": 10010,
+    "cost": 2,
+    "damage frames": {
+        "frame times": [
+            26,
+            44,
+            62
+        ],
+        "hit dmg% distribution": [
+            50,
+            30,
+            20
+        ],
+        "hit dmg% distribution (total)": 100,
+        "hits": 3
+    },
+    "dictionary": {
+        "description": "A swordsman from the ruined Agni Empire, he later became one of the Six Heroes. Proud of his late father, a Knight in the Order of Agni, he trained in the long sword, becoming a formidable knight. Although he is well-known for his countless victories over other warriors, he still considers himself inexperienced and continues to train with great zeal.",
+        "evolution": " ",
+        "fusion": "I still have much to learn!<br>I must become stronger!",
+        "summon": "So, you're calling on me, eh?<br>Alright then, I'll fight for you.<br>Just don't mess with my blade."
+    },
+    "drop check count": 2,
+    "element": "fire",
+    "evolution": {
+        "karma": 0,
+        "mats": [
+            {
+                "id": "10130",
+                "name": "Fire Nymph",
+                "type": "unit"
+            }
+        ],
+        "next": "10012",
+        "zel": 2500
+    },
+    "exp_pattern": 10,
+    "gender": "male",
+    "getting type": "not eligible for achievement",
+    "guide_id": 1,
+    "id": 10011,
+    "imp": {
+        "max atk": "160",
+        "max def": "80",
+        "max hp": "400",
+        "max rec": "80"
+    },
+    "kind": "normal",
+    "leader skill": {
+        "associated_units": [
+            "10011:ls",
+            "10012:ls",
+            "10122:ls",
+            "10162:ls",
+            "10333:ls",
+            "18830:ls",
+            "810003:ls"
+        ],
+        "desc": "25% boost to Atk Power of Fire Types",
+        "effects": [
+            {
+                "atk% buff": 25,
+                "elements buffed": [
+                    "fire"
+                ],
+                "params": "1,0,25,0,0,0,0",
+                "passive id": "2"
+            }
+        ],
+        "id": "100",
+        "name": "Fire Spirit's Power"
+    },
+    "lord damage range": "651~728",
+    "movement": {
+        "attack": {
+            "move speed": 0.0033,
+            "move speed type": "3",
+            "move type": "1"
+        },
+        "skill": {
+            "move speed": 0.0033,
+            "move speed type": "3",
+            "move type": "1"
+        }
+    },
+    "name": "Fencer Vargas",
+    "rarity": 2,
+    "sell caution": false,
+    "sell_price": 300,
+    "stats": {
+        "_base": {
+            "atk": 500,
+            "def": 410,
+            "hp": 1030,
+            "rec": 320
+        },
+        "_lord": {
+            "atk": 700,
+            "def": 574,
+            "hp": 1948,
+            "rec": 448
+        }
+    }
+}
