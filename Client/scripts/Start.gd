@@ -11,7 +11,7 @@ func _ready():
 	
 	Show("title")
 	GameMaster.start_sound = self.get_node("title/sound")
-	GameMaster.start_sound.play(0.0)
+	GameMaster.Playstart_sound()
 	#self.get_node("title/TouchScreenButton").shape.set("extents", app_size)
 
 func Show(parameter: String):
@@ -27,9 +27,19 @@ func _on_request_completed(result, response_code, headers, body):
 	print(body.get_string_from_utf8())
 	if(GameMaster.id_client == null):
 		print("no account")
-		get_tree().change_scene("res://Loading/Load.tscn")
 		
 
-func _on_Account_pressed():
-	#DO A MODAL
-	pass
+
+func _on_Settings_pressed():
+	self.get_node("title/btnSettings/btnSettingsPressed").visible = true
+	yield(get_tree().create_timer(0.2), "timeout")
+	self.get_node("title/btnSettings/btnSettingsPressed").visible = false
+	self.get_node("Settings").visible = true
+
+
+func _on_SettingsClose_pressed():
+	self.get_node("Settings/btnBack/btnBackPressed").visible = true
+	yield(get_tree().create_timer(0.2), "timeout")
+	self.get_node("Settings/btnBack/btnBackPressed").visible = false
+	self.get_node("Settings").visible = false
+	flag=0

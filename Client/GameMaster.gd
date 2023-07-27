@@ -19,6 +19,11 @@ var karma = 9999999999
 func _ready():
 	pass # Replace with function body.
 
+func Playstart_sound():
+	start_sound.play(0.0)
+	
+func Stopstart_sound():
+	start_sound.stop()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):

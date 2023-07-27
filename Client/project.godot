@@ -14,7 +14,7 @@ config/name="bravefrontier"
 run/main_scene="res://Game.tscn"
 boot_splash/image="res://logo.png"
 boot_splash/bg_color=Color( 0, 0, 0, 1 )
-config/icon="res://assets/units/img/unit_ills_full_10030.png"
+config/icon="res://logo.png"
 
 [autoload]
 

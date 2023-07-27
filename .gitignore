@@ -1,7 +1,5 @@
 # Projects files / directory
-.import
-Client/assets/units/img
-Client/assets/units
+Client/.import
 
 # Logs
 logs
