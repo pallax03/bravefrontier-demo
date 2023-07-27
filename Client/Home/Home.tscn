@@ -1,36 +1,18 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://assets/sound/home/bf002_mypage.mp3" type="AudioStream" id=1]
 [ext_resource path="res://assets/UI/home/base.jpg" type="Texture" id=2]
 [ext_resource path="res://assets/UI/home/character_frame.png" type="Texture" id=3]
 [ext_resource path="res://assets/UI/header/header_ui.png" type="Texture" id=4]
+[ext_resource path="res://Home/scripts/Header.gd" type="Script" id=5]
 [ext_resource path="res://assets/font-arial-bold.ttf" type="DynamicFontData" id=6]
 [ext_resource path="res://assets/UI/header/header_arena_light_01.png" type="Texture" id=7]
 [ext_resource path="res://assets/UI/footer/footer_btn.png" type="Texture" id=8]
+[ext_resource path="res://Home/scripts/Home.gd" type="Script" id=9]
 [ext_resource path="res://assets/UI/home/home_btn_box1.png" type="Texture" id=10]
 [ext_resource path="res://Home/scripts/Footer.gd" type="Script" id=12]
 [ext_resource path="res://assets/UI/home/home_win_quest.png" type="Texture" id=13]
 [ext_resource path="res://assets/UI/home/home_btn_menu1.png" type="Texture" id=14]
-
-[sub_resource type="GDScript" id=3]
-script/source = "
-extends Container
-
-
-# Declare member variables here. Examples:
-# var a = 2
-# var b = \"text\"
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
-"
 
 [sub_resource type="DynamicFont" id=1]
 font_data = ExtResource( 6 )
@@ -66,7 +48,7 @@ margin_bottom = -100.0
 [node name="Home" type="Container" parent="body"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-script = SubResource( 3 )
+script = ExtResource( 9 )
 
 [node name="CharacterFrame" type="Sprite" parent="body/Home"]
 position = Vector2( 321, 171.64 )
@@ -87,6 +69,7 @@ texture = ExtResource( 13 )
 [node name="header" type="Control" parent="."]
 margin_right = 644.0
 margin_bottom = 206.0
+script = ExtResource( 5 )
 __meta__ = {
 "_edit_lock_": true
 }
